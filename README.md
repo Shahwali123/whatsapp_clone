@@ -1,16 +1,20 @@
-# whatsapp_clone
+# whatsapp-clone
 
-A new Flutter project.
+WhatsApp Clone using Flutter and Node.js.
 
-## Getting Started
+## Project Description
 
-This project is a starting point for a Flutter application.
+The app will support the main functionalities like:
+* Chat
+* Voice Notes
+* Audio/Video Calling
+* Status Shorts
 
-A few resources to get you started if this is your first Flutter project:
+## Development Details
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* Flutter Fronted
+* Provider/bloc state management
+* Node.js Backend
+* Mongo DB Database
+* MVVM Architecture
+* Clean and readable code
