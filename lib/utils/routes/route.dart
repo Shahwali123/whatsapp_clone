@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/utils/routes/route_name.dart';
-import 'package:whatsapp_clone/view/navigation/tab_navigation.dart';
-import 'package:whatsapp_clone/view/splash/splash.dart';
+import 'package:whatsapp_clone/view/navigation/tab_nav.dart';
+import 'package:whatsapp_clone/view/splash/splash_view.dart';
 
 class Routes {
   static Route<dynamic> onGenerateRoute(RouteSettings routeSettings) {

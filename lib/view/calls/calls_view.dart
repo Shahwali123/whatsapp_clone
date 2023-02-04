@@ -1,4 +1,3 @@
-// building calls screen
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/constants/colors.dart';
 import 'package:whatsapp_clone/constants/styles.dart';
@@ -45,9 +44,9 @@ ListTile createCallBar() {
               fit: BoxFit.fill,
               image: AssetImage("assets/images/blank_profile.png"))),
     ),
-    title: const Text(
+    title: Text(
       "Muzammil Uet",
-      style: AppStyles.titleStyle,
+      style: AppStyle.title,
     ),
     subtitle: Row(
       children: const [
@@ -66,7 +65,7 @@ ListTile createCallBar() {
     ),
     trailing: const Icon(
       Icons.call,
-      color: AppColors.green,
+      color: AppColor.green,
     ),
   );
 }

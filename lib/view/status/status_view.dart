@@ -80,16 +80,16 @@ class _StatusScreenState extends State<StatusScreen> {
                   child: groupByValue == "b"
                       ? Text(
                           "Recent Updates",
-                          style: TextStyle(color: AppColors.grey),
+                          style: TextStyle(color: AppColor.grey),
                         )
                       : ((groupByValue == "c"
                           ? Text(
                               "Viewed Updates",
-                              style: TextStyle(color: AppColors.grey),
+                              style: TextStyle(color: AppColor.grey),
                             )
                           : Text(
                               "Muted Updates",
-                              style: TextStyle(color: AppColors.grey),
+                              style: TextStyle(color: AppColor.grey),
                             ))));
         },
         itemBuilder: (context, dynamic element) => createStatusBar(),
@@ -135,9 +135,9 @@ ListTile createStatusBar() {
               fit: BoxFit.fill,
               image: AssetImage("assets/images/blank_profile.png"))),
     ),
-    title: const Text(
+    title: Text(
       "My Status",
-      style: AppStyles.titleStyle,
+      style: AppStyle.title,
     ),
     subtitle: const Text(
       "Tap to add status update",

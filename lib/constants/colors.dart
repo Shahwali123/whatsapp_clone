@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class AppColors {
-  static const Color background = Color(0xff111B21);
+class AppColor {
+  static const Color primary = Color(0xff111B21);
   static const Color green = Color(0xff00A884);
   static const Color white = Colors.white;
   static const Color black = Colors.black;
-  static Color grey = AppColors.white.withOpacity(0.5);
+  static Color grey = AppColor.white.withOpacity(0.5);
 
-  static MaterialColor primaryColor = MaterialColor(0xff202C33, colorCodes);
+  static MaterialColor secondary = MaterialColor(0xff202C33, colorCodes);
 }
 
 Map<int, Color> colorCodes = {
