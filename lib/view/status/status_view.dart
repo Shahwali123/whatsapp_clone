@@ -1,60 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:grouped_list/grouped_list.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
-import 'package:whatsapp_clone/constants/styles.dart';
 
-const _elements = [
-  {
-    "group": "a", //my status
-    "ele": [1, 2, 3]
-  },
-  {
-    "group": "b", //recent updates
-    "ele": [1, 2, 3]
-  },
-  {
-    "group": "b", //recent updates
-    "ele": [1, 2, 3]
-  },
-  {
-    "group": "b", //recent updates
-    "ele": [1, 2, 3]
-  },
-  {
-    "group": "c", //viewed updates
-    "ele": [1, 2, 3]
-  },
-  {
-    "group": "c", //viewed updates
-    "ele": [1, 2, 3]
-  },
-  {
-    "group": "c", //viewed updates
-    "ele": [1, 2, 3]
-  },
-  {
-    "group": "c", //viewed updates
-    "ele": [1, 2, 3]
-  },
-  {
-    "group": "c", //viewed updates
-    "ele": [1, 2, 3]
-  },
-  {
-    "group": "c", //viewed updates
-  },
-  {
-    "group": "c", //viewed updates
-  },
-  {
-    "group": "d", //muted updates
-  },
-  {
-    "group": "d", //muted updates
-  }
-];
+import 'package:whatsapp_clone/res/assets_url.dart';
+import 'package:whatsapp_clone/res/colors.dart';
+import 'package:whatsapp_clone/res/styles.dart';
+import 'package:whatsapp_clone/widgets/fab_button.dart';
 
-// building status screen
+part 'status_lists.dart';
+part 'status_widgets.dart';
+
+enum StatusCateg { aMine, bRecent, cViewed, dMuted }
+
+class Status {
+  final StatusCateg category;
+  final String createdAt;
+  Status({
+    required this.category,
+    required this.createdAt,
+  });
+}
+
 class StatusScreen extends StatefulWidget {
   const StatusScreen({super.key});
 
@@ -66,82 +31,36 @@ class _StatusScreenState extends State<StatusScreen> {
   @override
   Widget build(BuildContext context) {
     return Stack(children: [
-      GroupedListView<dynamic, String>(
+      GroupedListView<Status, String>(
         padding: EdgeInsets.zero,
-        elements: _elements,
-        groupBy: (element) => element['group'],
-        groupSeparatorBuilder: (String groupByValue) {
-          return groupByValue == "a"
-              ? Container()
-              : Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 16, vertical: 0),
-                  width: double.infinity,
-                  child: groupByValue == "b"
-                      ? Text(
-                          "Recent Updates",
-                          style: TextStyle(color: AppColor.grey),
-                        )
-                      : ((groupByValue == "c"
-                          ? Text(
-                              "Viewed Updates",
-                              style: TextStyle(color: AppColor.grey),
-                            )
-                          : Text(
-                              "Muted Updates",
-                              style: TextStyle(color: AppColor.grey),
-                            ))));
+        elements: elements,
+        groupBy: (Status status) => status.category.name,
+        groupSeparatorBuilder: (String category) {
+          if (category == "aMine") {
+            return const SizedBox.shrink();
+          } else {
+            String title = (category == "bRecent"
+                ? "Recent Updates"
+                : (category == "cViewed" ? "Viewed Updates" : "Muted Updates"));
+            return Container(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 0),
+                width: double.infinity,
+                child: Text(
+                  title,
+                  style: TextStyle(color: AppColor.grey),
+                ));
+          }
         },
-        itemBuilder: (context, dynamic element) => createStatusBar(),
-        // itemComparator: (item1, item2) =>
-        // item1['name'].compareTo(item2['name']), // optional
-        // useStickyGroupSeparators: true, // optional
-        // floatingHeader: false, // optional
+        itemBuilder: (context, Status element) => const StatusBar(),
       ),
       Positioned(
         right: 12,
         bottom: 20,
         child: Column(
-          children: [
-            FloatingActionButton(
-              mini: true,
-              backgroundColor: Colors.green,
-              onPressed: () {},
-              child: const Icon(Icons.edit),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            FloatingActionButton(
-              backgroundColor: Colors.green,
-              onPressed: () {},
-              child: const Icon(Icons.camera_alt_outlined),
-            ),
-          ],
+          children: floatingActions,
         ),
       )
     ]);
   }
-}
-
-ListTile createStatusBar() {
-  return ListTile(
-    onTap: () {},
-    leading: Container(
-      width: 40,
-      decoration: const BoxDecoration(
-          shape: BoxShape.circle,
-          image: DecorationImage(
-              fit: BoxFit.fill,
-              image: AssetImage("assets/images/blank_profile.png"))),
-    ),
-    title: Text(
-      "My Status",
-      style: AppStyle.title,
-    ),
-    subtitle: const Text(
-      "Tap to add status update",
-      style: TextStyle(fontSize: 13, color: Colors.grey),
-    ),
-  );
 }

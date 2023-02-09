@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/constants/assets_url.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
-import 'package:whatsapp_clone/constants/styles.dart';
+import 'package:whatsapp_clone/res/assets_url.dart';
+import 'package:whatsapp_clone/res/colors.dart';
+import 'package:whatsapp_clone/res/styles.dart';
 import 'package:whatsapp_clone/utils/utils.dart';
 import 'package:whatsapp_clone/view/splash/splash_utils.dart';
 
@@ -33,7 +33,7 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             const Expanded(flex: 6, child: SizedBox()),
             Image.asset(
-              AssetsUrl.whatsappLogo,
+              AssetUrl.whatsappLogo,
               height: Utils.height / 7,
               width: Utils.width / 5,
               color: Colors.white,
@@ -46,12 +46,12 @@ class _SplashScreenState extends State<SplashScreen> {
             const SizedBox(
               height: 5,
             ),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 40),
-              child: Text(
-                "SW Khan",
-                style: AppStyle.title.copyWith(fontSize: 20),
-              ),
+            Text(
+              "SW Khan",
+              style: AppStyle.title.copyWith(fontSize: 20),
+            ),
+            SizedBox(
+              height: Utils.height * 0.08,
             )
           ],
         ),

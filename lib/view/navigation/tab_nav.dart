@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
-import 'package:whatsapp_clone/view/calls/calls_view.dart';
+import 'package:whatsapp_clone/res/colors.dart';
+import 'package:whatsapp_clone/view/call/call_view.dart';
 import 'package:whatsapp_clone/view/chat/chat_view.dart';
-import 'package:whatsapp_clone/view/navigation/nav_data.dart';
+import 'package:whatsapp_clone/view/navigation/nav_lists.dart';
 import 'package:whatsapp_clone/view/navigation/nav_widgets.dart';
 import 'package:whatsapp_clone/view/status/status_view.dart';
 
@@ -23,12 +23,14 @@ class NavigationScreen extends StatelessWidget {
                       SliverAppBar(
                         bottom: buildTabBar(),
                         floating: true,
-                        snap: true,
+                        // snap: true,
                         pinned: true,
                         automaticallyImplyLeading: false,
-                        title: Text(
-                          "Whatsapp",
-                          style: TextStyle(color: AppColor.grey),
+                        title: SizedBox(
+                          child: Text(
+                            "Whatsapp",
+                            style: TextStyle(color: AppColor.grey),
+                          ),
                         ),
                         actions: actionIcons,
                       ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
-import 'package:whatsapp_clone/view/navigation/nav_data.dart';
+import 'package:whatsapp_clone/res/colors.dart';
+import 'package:whatsapp_clone/view/navigation/nav_lists.dart';
 
 import '../../utils/utils.dart';
 

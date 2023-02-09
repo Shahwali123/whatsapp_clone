@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
+import 'package:whatsapp_clone/res/colors.dart';
 
 class AppThemes {
   static final mainTheme = ThemeData(

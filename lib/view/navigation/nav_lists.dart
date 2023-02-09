@@ -1,8 +1,8 @@
-// Actions
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
+import 'package:whatsapp_clone/res/colors.dart';
 import 'package:whatsapp_clone/view/navigation/nav_widgets.dart';
 
+// Actions
 List<Widget> actionIcons = [
   IconButton(
       onPressed: () {},

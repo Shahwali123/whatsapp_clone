@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/constants/theme/main_theme.dart';
+import 'package:whatsapp_clone/res/theme/main_theme.dart';
 import 'package:whatsapp_clone/utils/routes/route.dart';
 import 'package:whatsapp_clone/utils/routes/route_name.dart';
 
