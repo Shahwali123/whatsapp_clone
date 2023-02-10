@@ -22,11 +22,15 @@ class _ChatScreenState extends State<ChatScreen> {
             padding: const EdgeInsets.all(0),
             itemCount: 20,
             itemBuilder: (context, index) => const ChatBar()),
-        FAB(
-          iconData: Icons.message_outlined,
-          onPressed: () {
-            // TODO: Select Contact to Chat
-          },
+        Positioned(
+          right: 12,
+          bottom: 20,
+          child: FAB(
+            iconData: Icons.message_outlined,
+            onPressed: () {
+              // TODO: Select Contact to Chat
+            },
+          ),
         ),
       ],
     );

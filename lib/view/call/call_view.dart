@@ -37,11 +37,15 @@ class _CallScreenState extends State<CallScreen> {
             ),
           ],
         ),
-        FAB(
-          iconData: Icons.add_ic_call,
-          onPressed: () {
-            // TODO: Select contact to call functionalitys
-          },
+        Positioned(
+          right: 12,
+          bottom: 20,
+          child: FAB(
+            iconData: Icons.add_ic_call,
+            onPressed: () {
+              // TODO: Select contact to call functionalities
+            },
+          ),
         )
       ],
     );

@@ -1,8 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/res/colors.dart';
-import 'package:whatsapp_clone/view/navigation/nav_lists.dart';
-
-import '../../utils/utils.dart';
+part of 'tab_nav.dart';
 
 class CustomTab extends StatelessWidget {
   const CustomTab({Key? key, required this.label}) : super(key: key);

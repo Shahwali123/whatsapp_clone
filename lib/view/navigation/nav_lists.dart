@@ -1,29 +1,11 @@
-import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/res/colors.dart';
-import 'package:whatsapp_clone/view/navigation/nav_widgets.dart';
-
-// Actions
-List<Widget> actionIcons = [
-  IconButton(
-      onPressed: () {},
-      icon: Icon(
-        Icons.search_outlined,
-        color: AppColor.grey,
-      )),
-  IconButton(
-      onPressed: () {},
-      icon: Icon(
-        Icons.more_vert,
-        color: AppColor.grey,
-      ))
-];
+part of 'tab_nav.dart';
 
 // Tabs
 List<Widget> tabsList = [
   Container(
     padding: const EdgeInsets.symmetric(vertical: 5),
     child: const Icon(
-      Icons.camera_alt_outlined,
+      Icons.people,
     ),
   ),
   const CustomTab(

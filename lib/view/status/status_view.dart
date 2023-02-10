@@ -52,7 +52,9 @@ class _StatusScreenState extends State<StatusScreen> {
                 ));
           }
         },
-        itemBuilder: (context, Status element) => const StatusBar(),
+        itemBuilder: (context, Status element) {
+          return const StatusBar();
+        },
       ),
       Positioned(
         right: 12,

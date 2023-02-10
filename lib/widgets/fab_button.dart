@@ -11,17 +11,13 @@ class FAB extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Positioned(
-      right: 12,
-      bottom: 20,
-      child: FloatingActionButton(
-        mini: mini,
-        backgroundColor: AppColor.green,
-        onPressed: onPressed,
-        child: Icon(
-          iconData,
-          color: Colors.white,
-        ),
+    return FloatingActionButton(
+      mini: mini,
+      backgroundColor: AppColor.green,
+      onPressed: onPressed,
+      child: Icon(
+        iconData,
+        color: Colors.white,
       ),
     );
   }
