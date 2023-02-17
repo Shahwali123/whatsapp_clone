@@ -5,7 +5,7 @@ import 'package:whatsapp_clone/res/styles.dart';
 import 'package:whatsapp_clone/utils/utils.dart';
 import 'package:whatsapp_clone/view/call/call_view.dart';
 import 'package:whatsapp_clone/view/chat/chat_view.dart';
-import 'package:whatsapp_clone/view/community/community_view.dart';
+import 'package:whatsapp_clone/view/community/comm_view.dart';
 import 'package:whatsapp_clone/view/status/status_view.dart';
 import 'package:whatsapp_clone/viewmodel/media_provider.dart';
 
