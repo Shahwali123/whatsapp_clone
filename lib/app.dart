@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:whatsapp_clone/res/theme/main_theme.dart';
-import 'package:whatsapp_clone/utils/routes/route.dart';
-import 'package:whatsapp_clone/utils/routes/route_name.dart';
-import 'package:whatsapp_clone/viewmodel/media_provider.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:whatsapp_clone/core/res/theme/main_theme.dart';
+import 'package:whatsapp_clone/core/utils/routes/route.dart';
+import 'package:whatsapp_clone/core/utils/routes/route_name.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+  static const double _designWidth = 375;
+  static const double _designHeight = 815;
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [ChangeNotifierProvider(create: (_) => MediaProvider())],
-      child: MaterialApp(
+    return ScreenUtilInit(
+      designSize: const Size(_designWidth, _designHeight),
+      builder: (context, child) => MaterialApp(
         initialRoute: RouteName.splash,
         theme: AppThemes.mainTheme,
         debugShowCheckedModeBanner: false,
